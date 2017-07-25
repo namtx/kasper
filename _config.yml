@@ -1,16 +1,21 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: "Trần Xuân Nam"
+account: "@namtx"
+title: "Ruby Developer / Javascript lover"
+description: Blogging about stuffs what I learned
+meta_description: "Trần Xuân Nam, Blogging about stuffs what I learned"
+facebook: "https://fb.com/mysm.xuannam"
+github: "https://github.com/namtx"
+twitter: "https://twitter.com/nam___tx"
 
 markdown: kramdown
 highlighter: pygments
 logo: false
 paginate: 15
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
+domain_name: 'namtx.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
-url:            'blog url'
-author:         'Your Name'
+url:            'https://namtx.github.io'
+author:         '0x6e616d7478'
