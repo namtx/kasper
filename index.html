@@ -16,11 +16,26 @@ about: 'about.html'
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
+            <h1>
+              <img src="/assets/images/profile.png" />
+            </h1>
             <h1 class="page-title">{{ site.name }}</h1>
+            <p class="account-custom">{{ site.account }}</p>
             <h2 class="page-description">
-                {% if site.description %} {{ site.description }}. {% endif %}
-                {% if page.about %} <a href='{{ site.baseurl }}{{ page.about }}'> About me </a> {% endif %}
+              {{ site.title }}
             </h2>
+
+            <div class="account-images">
+              <a href="{{ site.facebook }}" target="_blank">
+                <i class="fa fa-facebook-square"></i>
+              </a>
+              <a href="{{ site.twitter }}" target="_blank">
+                <i class="fa fa-twitter-square"></i>
+              </a>
+              <a href="{{ site.github }}" target="_blank">
+                <i class="fa fa-github-square"></i>
+              </a>
+            </div>
         </div>
     </div>
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
@@ -48,12 +63,12 @@ about: 'about.html'
                 <img class="author-thumb" src="/assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
                 {{ site.author }}
             {% endif %}
-            {% if post.categories.size > 0 %} 
-                {{ post.categories | array_to_sentence_string | prepend: 'on ' }} 
+            {% if post.categories.size > 0 %}
+                {{ post.categories | array_to_sentence_string | prepend: 'on ' }}
             {% endif %}
             <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
                 {{ post.date | date_to_string }}
-            </time> 
+            </time>
         </footer>
     </article>
 

@@ -4,11 +4,72 @@
 ---
 
 /* We need to add display:inline in order to align the '>>' of the 'read more' link */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+* {
+	font-family: 'Inconsolata', monospace !important;
+}
+.fa {
+	font-family: 'FontAwesome' !important;
+}
 .post-excerpt p {
 	display:inline;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-	"syntax"
-;
+
+.account-custom {
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #FCAA54;
+}
+
+.account-images {
+	padding-top: 50px;
+	font-size: 3em;
+	a {
+		text-decoration: none;
+		padding: 20px 15px;
+	}
+}
+.no-cover.main-header {
+	min-height: 100%;
+}
+
+figure.highlight {
+	font-size: 1em;
+}
+
+pre {
+	padding: 0;
+	border-radius: 0;
+}
+
+code {
+	white-space: pre !important;
+}
+
+p,li {
+	code {
+		background: #FAFAFA;
+		color: #cc6666;
+    padding: 2px;
+    border-radius: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 0.95em;
+	}
+}
+
+.post-header {
+	.post-meta {
+		clear: both;
+		text-align: right;
+		color: #3A4145;
+
+		.post-date {
+			border-left: none;
+			font-size: 1.1em;
+			text-transform: capitalize;
+		}
+	}
+}
