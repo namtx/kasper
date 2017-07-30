@@ -3,6 +3,7 @@ layout: post
 title:  "Tăng tốc Bundler bằng câu lệnh đơn giản"
 date:   2017-07-26 10:18:00
 categories: Ruby Rails Gem
+image: http://media.tumblr.com/76501d7e366e32c68e05bf0e931206ac/tumblr_inline_ms7d9qF6Hb1qz4rgp.png
 ---
 
 #### Lý do

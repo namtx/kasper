@@ -13,7 +13,7 @@ logo: false
 paginate: 15
 baseurl: /
 domain_name: 'namtx.github.io'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-103273269-1'
 plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
