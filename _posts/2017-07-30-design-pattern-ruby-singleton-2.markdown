@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "[Series-DesignPatternInRuby] Singleton - Phần 2"
-date:   2017-07-30 10:18:00
-categories: Ruby DesignPattern
-image: http://media.tumblr.com/76501d7e366e32c68e05bf0e931206ac/tumblr_inline_ms7d9qF6Hb1qz4rgp.png
+title:  "Series-DesignPatternInRuby Singleton - Phần 2"
+date:   2017-07-26 10:18:00
+categories: Ruby
 ---
 
 Đây là phần 2 về Singleton Pattern trong Series DesignPatternInRuby mà mình muốn giới thiệu với mọi người. Bạn có thể tham khảo phần 1 tại đây: [[Series-DesignPatternInRuby] Singleton - Phần 1](https://viblo.asia/p/series-designpatterninruby-singleton-phan-1-E375zb1W5GW)
@@ -27,10 +26,12 @@ Logger = SimpleLogger.new
 Nhưng liệu `constant` có thể giúp chúng ta xây dựng được `Singleton`, câu trả lời là:
 > Không hẳn
 >
+
 Có một số điểm mà `global variable` cũng như `constant` không thể giúp chúng ta sử dụng được `Singleton`:
 + Không có cách nào giúp chúng ta có thể `delay` việc khởi tạo `instance`
 + Không đảm bảo được việc tạo chỉ tạo được duy nhất một `instance` của `class`
 Có một cách khá *hack* đó là sau khi tạo ra `instance` của `class`, chúng ta sẽ thay đổi `class` đó đi, và sau đó, việc khởi tạo `instance` khác sẽ là không thể. Nhưng phương án này chỉ nói ra thôi cũng thấy *hack não* rồi. (yaoming)
+
 #### Class as Singleton
 Như chúng ta đã thấy, chúng ta có thể define `method` và `ariables`trực tiếp trên `class`. Thực tế, như phần 1 đã giới thiệu thì chúng ta đã implement `singleton` bằng `class method` và `class variables` để quản lý `singleton instance`. Vậy, nếu class cũng có riêng các `method` và các `variables` thì tại sao không nghĩ đến việc là chỉ cần dùng `class` thôi.
 + Mỗi `class` là duy nhất.
@@ -78,6 +79,7 @@ Kỹ thuật `Class as Singleton` được trình bày ở trên vượt trội 
 Nhược điểm của kĩ thuật này là gì? Đó là
 > Code có vẻ khó đọc hơn với những người cảm thấy lạ với `self` và `@@` variable.
 >
+
 #### Modules as Singletons
 Có một phương pháp khác nữa là: sử dụng `Module`. `Module` có rất nhiều nét tương đồng với `Class`, chúng ta có thể tạo ra class `module-level` `methods` cũng như `variable` giống hệt cách mà chúng ta tạo `class-level` `methods`, `variables`.
 ```
