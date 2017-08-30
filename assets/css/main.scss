@@ -77,3 +77,25 @@ p,li {
 blockquote {
 	margin-left: 0;
 }
+
+.post-item {
+	padding-left: 15em;
+
+	.post-link {
+		color: #e74c3c;
+		font-size: 1em;
+		line-height: 150%;
+		cursor: pointer;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.pagination,
+.site-footer {
+	color: #e74c3c;
+	font-size: 14px;
+}
