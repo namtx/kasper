@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+- 2.4.1
+install:
+- gem install jekyll
+- gem install jekyll-sitemap
+- gem install jekyll-paginate
+- gem install rspec-core
+branches:
+  only:
+  - master
+after_success:
+- jekyll build
+- .travis/push.sh
+notifications:
+  email:
+    recipients:
+    - tran.xuan.nam@framgia.com
+    on_success: always
+    on_failure: always
+env:
+  global:
+    secure: iGuAzaUAEdrBkCAkrGykfefj1l6VmsU7VUZJLo4aJdDgq7faEuIjwMh6yJXsIZbmDBpxqVYRhaKCZ8qh2MkIkQwjWN/7hazbTPZPKaHAQpMxAndFP06YhmlcokbRJINf8ShTwKMUwUbMLNlQHMtALyFNd4EQ9qJ6sq/ZjaNqSN3VE5GM+AAn6jypy80t4dxTTrtVf8hBnFQBM6IAm0BbKT5YBKJMjMckqfKuAgNW5DC+9fvz/Ob97X/kDuw83+7xBtsYR3cj+4MBWfXgEMKvvVNwOo+PbrLZQE9UyhYE6Utk2Z/rdbAkHJ0ZfTDIJsgPyqtsj2Qt5SIxnUeRjB3TDPeAJT4Agb8P4tZ3jPfGY+mqVmX0vyCvfV5ynKsbQgkn3Gczvm3toFRwr3z+1rxRdczjF3czu7lB0GTaz7rfCqbWril++4N/X7A4WtZvKj5Jci6eZOr8YD8uWyKIEk6uoF8+Y4kNAjoQmnhC8Csq+TGI/NNZ3aZpDuNNcESQ2dcxbM9UYjj8zRen5tnPaQ9Ze2xyfw9Sys6doL5dymYaLm6i4qp+752Yir7E8q3ZLfFTHT8yYybgDa/OwllNbJdqAKyAHwYt2ertdrWQfTdglbAnzi1c2e5NKHc2jnqJsa/MeJP+ys0QBYe1pc69aaGMclzKo+hLpBiudcHIvGutqk8=
