@@ -1,3 +1,4 @@
+![Travis-CI](https://travis-ci.org/namtx/kasper.svg?branch=master)
 # Kasper
 
 > This is a port of Ghost's default theme [Casper](https://github.com/tryghost/casper) for Jekyll. 
