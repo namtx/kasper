@@ -2,7 +2,7 @@
 layout: post
 title: "Observer pattern trong Ruby"
 date: 2017-08-31 11:14:00
-categories: Ruby, Design Pattern
+categories: Ruby Design Pattern
 ---
 
 ### Observer Patter

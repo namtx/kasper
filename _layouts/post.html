@@ -11,41 +11,17 @@ post_class: post-template
         <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
     </nav>
 </header>
-
 <main class="content" role="main">
-
     <article class="post">
-
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
             <section class="post-meta">
                 <p class="post-date"><span style="font-weight: 600">Published: <span>{{ page.date | date_to_string }}</p>
             </section>
         </header>
-
-<!--         <header class="post-header">
-            <a id="blog-logo" href="{{site.url}}">
-                {% if site.logo %}
-                    <img src="{{site.logo}}" alt="{{ site.name }}" />
-                {% else %}
-                    <span class="blog-title">{{ site.name }}</span>
-                {%endif%}
-            </a>
-        </header> -->
-
-        <!-- <span class="post-meta">
-            <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-            {% if page.categories.size > 0 %}
-                {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
-            {% endif %}
-        </span> -->
-
-        <!-- <h1 class="post-title">{{ page.title }}</h1> -->
-
         <section class="post-content">
             {{content}}
         </section>
-
         {% if page.archive %}
         <section class="archive">
             <h5>Archive</h5>
@@ -56,34 +32,23 @@ post_class: post-template
             </ul>
         </section>
         {% endif %}
-
         <footer class="post-footer">
-            <!-- If we want to display author's name and bio -->
             {% if site.author %}
                 <figure class="author-image">
                     <a class="img" href="{{ site.baseurl }}" style="background-image: url(/assets/images/profile.png)">
                     <span class="hidden">{{site.author}}'s Picture</span></a>
                 </figure>
                 <section class="author">
-                    <!-- Author Name -->
                     <h4> {{ site.author }} </h4>
-                    <!-- Author Bio -->
                     <p>
-                        Here goes the author description. You might want to place some links too in here
+                        Road to 1k
                     </p>
                 </section>
             {% endif %}
-
-            <!-- Share links section -->
             {% include share.html %}
-
-            <!-- Disqus comments -->
             {% if page.disqus %}
                 {% include disqus.html %}
             {% endif %}
-
         </footer>
-
     </article>
-
 </main>

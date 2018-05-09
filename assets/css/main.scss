@@ -92,6 +92,10 @@ blockquote {
 			text-decoration: underline;
 		}
 	}
+
+	@media (max-width: 768px) {
+		padding-left: 2em;
+	}
 }
 
 .pagination,
